@@ -145,7 +145,7 @@
               </div>
               <div id="p-val" class="price-amount">— €</div>
             </div>
-            <div class="price-note">Tarif estimatif · 2,10 €/km · minimum 15 € · hors péages</div>
+            <div class="price-note"><span id="price-note">Tarif estimatif · 2,10 €/km · minimum 15 € · hors péages</span></div>
             <input type="hidden" name="montant" id="montant-inp" value="15">
             <input type="hidden" name="distance_km" id="distance-inp" value="0">
           </div>
@@ -194,9 +194,9 @@
                 <path d="M14 17H8"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/>
                 <path d="M5 9l2-4h10l2 4"/>
               </svg>
-              <div class="vn">Toyota C-HR</div>
-              <div class="vd">1 – 4 passagers</div>
-              <div class="vbadge vbadge--ok">Disponible immédiatement</div>
+              <div class="vn" id="veh1-name">Toyota C-HR</div>
+              <div class="vd" id="veh1-pass">1 – 4 passagers</div>
+              <div class="vbadge vbadge--ok" id="veh1-badge">Disponible immédiatement</div>
             </div>
 
             <div class="vopt" onclick="selV(this,'camionnette')">
@@ -205,9 +205,9 @@
                 <path d="M16 10h4l3 3v4h-7V10z"/>
                 <circle cx="5.5" cy="18" r="1.5"/><circle cx="18.5" cy="18" r="1.5"/>
               </svg>
-              <div class="vn">Camionnette</div>
-              <div class="vd">Bagages volumineux</div>
-              <div class="vbadge vbadge--warn">⚠ 5 jours de préavis</div>
+              <div class="vn" id="veh2-name">Camionnette</div>
+              <div class="vd" id="veh2-pass">Bagages volumineux</div>
+              <div class="vbadge vbadge--warn" id="veh2-badge">⚠ 5 jours de préavis</div>
             </div>
 
           </div>

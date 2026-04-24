@@ -81,6 +81,18 @@ const T = {
     'ft-h':'Accueil','ft-s':'Services','ft-b':'Réserver','ft-a':'À propos',
     'ft-s1':'Aéroport','ft-s2':'Professionnel','ft-s3':'Événements','ft-s4':'Médical',
     'ft-av':'24h/24 — 7j/7','ft-copy':'© 2026 ILS VTC · SIRET 90769233900019','ft-mot':'Excellence & Discrétion',
+
+    /* flotte about */
+    'fleet-label':'Notre flotte','fleet-title':'Des véhicules <em>soigneusement choisis</em>',
+    'fleet1-badge':'× 2 disponibles','fleet1-name':'Toyota C-HR','fleet1-desc':'Hybride, confortable et élégant. 1 à 4 passagers avec bagages standard.',
+    'fleet1-f1':'Disponible immédiatement','fleet1-f2':'Hybride — faibles émissions','fleet1-f3':'Climatisation automatique',
+    'fleet2-badge':'Préavis 5 jours','fleet2-name':'Camionnette','fleet2-desc':'Pour les bagages volumineux, fauteuils roulants ou équipements spéciaux.',
+    'fleet2-f1':'Grande capacité de chargement','fleet2-f2':'Réservation 5 j à l\'avance','fleet2-f3':'Tarif sur devis',
+    'about-badge-lbl':'Trajets réalisés',
+    /* véhicules réservation */
+    'veh1-name':'Toyota C-HR','veh1-pass':'1 – 4 passagers','veh1-badge':'Disponible immédiatement',
+    'veh2-name':'Camionnette','veh2-pass':'Bagages volumineux','veh2-badge':'⚠ 5 jours de préavis',
+    'price-note':'Tarif estimatif · 2,10 €/km · minimum 15 € · hors péages',
     '_toast_book':'Réservation enregistrée. Confirmation dans les 30 minutes.','_toast_msg':'Message envoyé. Nous vous répondrons bientôt.'
   },
   en: {
@@ -133,6 +145,18 @@ const T = {
     'ft-h':'Home','ft-s':'Services','ft-b':'Book','ft-a':'About',
     'ft-s1':'Airport','ft-s2':'Professional','ft-s3':'Events','ft-s4':'Medical',
     'ft-av':'24h — 7 days','ft-copy':'© 2026 ILS VTC · SIRET 90769233900019','ft-mot':'Excellence & Discretion',
+
+    /* fleet about */
+    'fleet-label':'Our fleet','fleet-title':'Carefully <em>selected vehicles</em>',
+    'fleet1-badge':'× 2 available','fleet1-name':'Toyota C-HR','fleet1-desc':'Hybrid, comfortable and elegant. 1 to 4 passengers with standard luggage.',
+    'fleet1-f1':'Available immediately','fleet1-f2':'Hybrid — low emissions','fleet1-f3':'Automatic air conditioning',
+    'fleet2-badge':'5 days notice','fleet2-name':'Van','fleet2-desc':'For bulky luggage, wheelchairs or special equipment.',
+    'fleet2-f1':'Large loading capacity','fleet2-f2':'5-day advance booking','fleet2-f3':'Quote on request',
+    'about-badge-lbl':'Trips completed',
+    /* vehicle reservation */
+    'veh1-name':'Toyota C-HR','veh1-pass':'1 – 4 passengers','veh1-badge':'Available immediately',
+    'veh2-name':'Van','veh2-pass':'Bulky luggage','veh2-badge':'⚠ 5 days notice',
+    'price-note':'Estimated fare · €2.10/km · minimum €15 · tolls not included',
     '_toast_book':'Booking received. Confirmation within 30 minutes.','_toast_msg':"Message sent. We'll be in touch shortly."
   }
 };
