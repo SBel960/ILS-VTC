@@ -80,7 +80,7 @@ const T = {
     'ft-nav':'Navigation','ft-st':'Services','ft-ct':'Contact',
     'ft-h':'Accueil','ft-s':'Services','ft-b':'Réserver','ft-a':'À propos',
     'ft-s1':'Aéroport','ft-s2':'Professionnel','ft-s3':'Événements','ft-s4':'Médical',
-    'ft-av':'24h/24 — 7j/7','ft-copy':'© 2026 ILS VTC · SIRET 90769233900019','ft-mot':'Excellence & Discrétion',
+    'ft-av':'24h/24 — 7j/7','ft-copy':'© 2026 ILS VTC · SIRET 84295268100018','ft-mot':'Excellence & Discrétion',
 
     /* flotte about */
     'fleet-label':'Notre flotte','fleet-title':'Des véhicules <em>soigneusement choisis</em>',
@@ -144,7 +144,7 @@ const T = {
     'ft-nav':'Navigation','ft-st':'Services','ft-ct':'Contact',
     'ft-h':'Home','ft-s':'Services','ft-b':'Book','ft-a':'About',
     'ft-s1':'Airport','ft-s2':'Professional','ft-s3':'Events','ft-s4':'Medical',
-    'ft-av':'24h — 7 days','ft-copy':'© 2026 ILS VTC · SIRET 90769233900019','ft-mot':'Excellence & Discretion',
+    'ft-av':'24h — 7 days','ft-copy':'© 2026 ILS VTC · SIRET 84295268100018','ft-mot':'Excellence & Discretion',
 
     /* fleet about */
     'fleet-label':'Our fleet','fleet-title':'Carefully <em>selected vehicles</em>',
