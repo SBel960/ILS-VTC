@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}TransportPro — Service de Transport de Personnes{% endblock %}</title>
+    <meta name="description" content="{% block description %}TransportPro, votre service de transport de personnes professionnel et fiable. Réservez votre trajet en quelques clics.{% endblock %}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ═══ BARRE SUPÉRIEURE ════════════════════════════════════════════════ -->
+    <div class="topbar">
+        <div class="container topbar__inner">
+            <div class="topbar__left">
+                <span><i class="fa-solid fa-phone"></i> +33 1 23 45 67 89</span>
+                <span><i class="fa-solid fa-envelope"></i> contact@transportpro.fr</span>
+            </div>
+            <div class="topbar__right">
+                <span><i class="fa-solid fa-clock"></i> Disponible 24h/24 — 7j/7</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ NAVIGATION ══════════════════════════════════════════════════════ -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <!-- Logo -->
+            <a href="{{ url_for('index') }}" class="navbar__logo">
+                <i class="fa-solid fa-car-side"></i>
+                <span>Transport<strong>Pro</strong></span>
+            </a>
+
+            <!-- Hamburger (mobile) -->
+            <button class="navbar__burger" id="burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <!-- Liens -->
+            <nav class="navbar__nav" id="nav-menu">
+                <a href="{{ url_for('index') }}" class="navbar__link {% if request.endpoint == 'index' %}active{% endif %}">Accueil</a>
+                <a href="{{ url_for('services') }}" class="navbar__link {% if request.endpoint == 'services' %}active{% endif %}">Services</a>
+                <a href="{{ url_for('about') }}" class="navbar__link {% if request.endpoint == 'about' %}active{% endif %}">À propos</a>
+                <a href="{{ url_for('contact') }}" class="navbar__link {% if request.endpoint == 'contact' %}active{% endif %}">Contact</a>
+                <a href="{{ url_for('devis') }}" class="btn btn--primary navbar__cta">Demander un devis</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ═══ MESSAGES FLASH ══════════════════════════════════════════════════ -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-container">
+                {% for category, message in messages %}
+                    <div class="flash flash--{{ category }}">
+                        <i class="fa-solid {% if category == 'success' %}fa-circle-check{% else %}fa-circle-exclamation{% endif %}"></i>
+                        {{ message }}
+                        <button class="flash__close" onclick="this.parentElement.remove()">×</button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- ═══ CONTENU PRINCIPAL ═══════════════════════════════════════════════ -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- ═══ FOOTER ══════════════════════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <!-- Colonne 1 — Marque -->
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <i class="fa-solid fa-car-side"></i>
+                    <span>Transport<strong>Pro</strong></span>
+                </div>
+                <p class="footer__desc">
+                    Votre partenaire de confiance pour tous vos déplacements. Confort, ponctualité et professionnalisme au service de vos voyages.
+                </p>
+                <div class="footer__socials">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Colonne 2 — Navigation -->
+            <div class="footer__col">
+                <h4 class="footer__title">Navigation</h4>
+                <ul class="footer__links">
+                    <li><a href="{{ url_for('index') }}">Accueil</a></li>
+                    <li><a href="{{ url_for('services') }}">Nos services</a></li>
+                    <li><a href="{{ url_for('about') }}">À propos</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li><a href="{{ url_for('devis') }}">Demander un devis</a></li>
+                </ul>
+            </div>
+
+            <!-- Colonne 3 — Services -->
+            <div class="footer__col">
+                <h4 class="footer__title">Nos services</h4>
+                <ul class="footer__links">
+                    <li><a href="{{ url_for('services') }}">Transfert aéroport</a></li>
+                    <li><a href="{{ url_for('services') }}">Transport longue distance</a></li>
+                    <li><a href="{{ url_for('services') }}">Navettes entreprises</a></li>
+                    <li><a href="{{ url_for('services') }}">Occasions spéciales</a></li>
+                    <li><a href="{{ url_for('services') }}">Tourisme & excursions</a></li>
+                </ul>
+            </div>
+
+            <!-- Colonne 4 — Contact -->
+            <div class="footer__col">
+                <h4 class="footer__title">Contact</h4>
+                <ul class="footer__contact">
+                    <li><i class="fa-solid fa-phone"></i> +33 1 23 45 67 89</li>
+                    <li><i class="fa-solid fa-envelope"></i> contact@transportpro.fr</li>
+                    <li><i class="fa-solid fa-location-dot"></i> 12 Rue de la Paix, 75001 Paris</li>
+                    <li><i class="fa-solid fa-clock"></i> Disponible 24h/24 — 7j/7</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p>© {{ 2024 }} TransportPro. Tous droits réservés.</p>
+                <div class="footer__legal">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══ BOUTON RETOUR EN HAUT ════════════════════════════════════════════ -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- ═══ SCRIPTS ════════════════════════════════════════════════════════= -->
+    <script>
+        // Navbar sticky au scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('navbar--scrolled', window.scrollY > 50);
+            document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 300);
+        });
+
+        // Menu burger
+        document.getElementById('burger').addEventListener('click', function() {
+            this.classList.toggle('open');
+            document.getElementById('nav-menu').classList.toggle('open');
+        });
+
+        // Retour en haut
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Animation au scroll (Intersection Observer)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('animated'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+    </script>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

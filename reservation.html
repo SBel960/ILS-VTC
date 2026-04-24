@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réserver un VTC à Blois | ILS VTC — Tarif 2,10€/km</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- SEO -->
+  <meta name="description" content="Réservez votre chauffeur VTC à Blois en ligne. Calcul du tarif en temps réel, confirmation WhatsApp immédiate. Toyota C-HR hybride.">
+  <meta name="keywords" content="réserver VTC Blois, réservation taxi Blois, chauffeur Blois en ligne">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="ILS VTC">
+  <link rel="canonical" href="https://ilsvtc.fr/reservation">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ILS VTC">
+  <meta property="og:url" content="https://ilsvtc.fr/reservation">
+  <meta property="og:title" content="Réserver un VTC à Blois | ILS VTC — Tarif 2,10€/km">
+  <meta property="og:description" content="Réservez votre chauffeur VTC à Blois en ligne. Calcul du tarif en temps réel, confirmation WhatsApp immédiate. Toyota C-HR hybride.">
+  <meta property="og:image" content="https://ilsvtc.fr/og-image.jpg">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Réserver un VTC à Blois | ILS VTC — Tarif 2,10€/km">
+  <meta name="twitter:description" content="Réservez votre chauffeur VTC à Blois en ligne. Calcul du tarif en temps réel, confirmation WhatsApp immédiate. Toyota C-HR hybride.">
+  <meta name="twitter:image" content="https://ilsvtc.fr/og-image.jpg">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="FR-41">
+  <meta name="geo.placename" content="Blois">
+  <meta name="geo.position" content="47.5941;1.3330">
+  <meta name="ICBM" content="47.5941, 1.3330">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "ILS VTC",
+    "description": "Service VTC professionnel à Blois et ses environs. Chauffeur privé disponible 24h/24, 7j/7. Toyota C-HR hybride, tarif 2,10€/km.",
+    "url": "https://ilsvtc.fr",
+    "telephone": "+33641351859",
+    "email": "ilieslassoued@gmail.com",
+    "priceRange": "2,10€/km",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, WhatsApp Pay",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 47.5941, "longitude": 1.3330 },
+      "geoRadius": "50000"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Blois",
+      "addressRegion": "Loir-et-Cher",
+      "postalCode": "41000",
+      "addressCountry": "FR"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 47.5941, "longitude": 1.3330 },
+    "identifier": { "@type": "PropertyValue", "name": "SIRET", "value": "90769233900019" },
+    "vehicle": {
+      "@type": "Car",
+      "name": "Toyota C-HR Hybride",
+      "numberOfDoors": 4
+    },
+    "sameAs": ["https://wa.me/33641351859"]
+  }
+  </script>
+</head>
+<body data-page="reservation">
+<canvas id="bg-canvas"></canvas>
+<div class="bg-vignette"></div>
+<div class="wrap">
+
+  <nav>
+    <a class="logo" href="index.html">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" stroke="#9e8055" stroke-width="1"/><path d="M6 20L14 8L22 20" stroke="#9e8055" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 20H18.5" stroke="#9e8055" stroke-width="1" stroke-linecap="round"/></svg>
+      <div class="logo-wordmark"><span class="logo-main">ILS <span>VTC</span></span><span class="logo-sub">Transport Privé</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-p="home">Accueil</a></li>
+      <li><a href="services.html" data-p="services">Services</a></li>
+      <li><a href="reservation.html" data-p="reservation">Réservation</a></li>
+      <li><a href="about.html" data-p="about">À propos</a></li>
+      <li><a href="contact.html" data-p="contact">Contact</a></li>
+    </ul>
+    <div class="nav-r">
+      <div class="lang"><button class="lb active" onclick="setLang('fr')">FR</button><button class="lb" onclick="setLang('en')">EN</button></div>
+      <a class="ncta" href="reservation.html">Réserver</a>
+      <div class="burger" onclick="toggleMob()"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="form-wrap" style="padding-top:5.5rem">
+    <div class="sh">
+      <p class="slabel">Réservation en ligne</p>
+      <h1 class="stitle">Planifiez votre <em>trajet</em></h1>
+      <p class="ssub">Remplissez le formulaire ci-dessous. Confirmation sous 30 minutes.</p>
+    </div>
+
+    <div class="fcard">
+      <div class="fsteps">
+        <div class="fstep active" id="tab1">① Trajet</div>
+        <div class="fstep" id="tab2">② Véhicule</div>
+        <div class="fstep" id="tab3">③ Paiement</div>
+      </div>
+
+      <form id="book-form" onsubmit="submitBook(event)">
+
+        <!-- ═══ ÉTAPE 1 — TRAJET ═══════════════════════════════════ -->
+        <div id="st1">
+          <p class="fst">Détails du trajet</p>
+
+          <div class="fg autocomplete-wrap">
+            <label class="fl">Point de départ</label>
+            <input type="text" name="depart" id="depart-inp" class="fi"
+                   placeholder="Ex : 12 rue Nationale, Blois" autocomplete="off" required>
+            <ul class="ac-list" id="depart-list"></ul>
+            <input type="hidden" id="depart-lat">
+            <input type="hidden" id="depart-lon">
+          </div>
+
+          <div class="fg autocomplete-wrap">
+            <label class="fl">Destination</label>
+            <input type="text" name="destination" id="dest-inp" class="fi"
+                   placeholder="Ex : Aéroport CDG, Roissy" autocomplete="off" required>
+            <ul class="ac-list" id="dest-list"></ul>
+            <input type="hidden" id="dest-lat">
+            <input type="hidden" id="dest-lon">
+          </div>
+
+          <!-- Calculateur de prix -->
+          <div class="price-box" id="price-box" style="display:none">
+            <div class="price-row">
+              <span class="price-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </span>
+              <div class="price-details">
+                <span id="p-km" class="price-km">— km</span>
+                <span id="p-dur" class="price-dur"></span>
+              </div>
+              <div id="p-val" class="price-amount">— €</div>
+            </div>
+            <div class="price-note">Tarif estimatif · 2,10 €/km · minimum 15 € · hors péages</div>
+            <input type="hidden" name="montant" id="montant-inp" value="15">
+            <input type="hidden" name="distance_km" id="distance-inp" value="0">
+          </div>
+
+          <div class="price-loading" id="price-loading" style="display:none">
+            <span class="spinner"></span> Calcul du trajet en cours…
+          </div>
+
+          <div class="fr2">
+            <div class="fg"><label class="fl">Date</label><input type="date" name="date" id="trip-date" class="fi" required></div>
+            <div class="fg"><label class="fl">Heure</label><input type="time" name="heure" class="fi" required></div>
+          </div>
+
+          <div class="fg">
+            <label class="fl">Type de service</label>
+            <select name="service" class="fsel" required>
+              <option value="">— Sélectionner —</option>
+              <option value="aeroport">Transfert aéroport</option>
+              <option value="professionnel">Transport professionnel</option>
+              <option value="evenement">Événement spécial</option>
+              <option value="medical">Transport médical</option>
+              <option value="longue">Longue distance</option>
+              <option value="scolaire">Transport scolaire</option>
+            </select>
+          </div>
+
+          <div class="fg">
+            <label class="fl">Nombre de passagers</label>
+            <select name="passagers" class="fsel">
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+            </select>
+          </div>
+
+          <button type="button" class="sbtn" onclick="nxtStep(2)">Continuer →</button>
+        </div>
+
+        <!-- ═══ ÉTAPE 2 — VÉHICULE ════════════════════════════════ -->
+        <div id="st2" style="display:none">
+          <p class="fst">Choisir votre véhicule</p>
+
+          <div class="vopts" style="grid-template-columns:1fr 1fr;gap:1rem">
+
+            <div class="vopt sel" onclick="selV(this,'chr')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M5 17H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"/>
+                <path d="M14 17H8"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/>
+                <path d="M5 9l2-4h10l2 4"/>
+              </svg>
+              <div class="vn">Toyota C-HR</div>
+              <div class="vd">1 – 4 passagers</div>
+              <div class="vbadge vbadge--ok">Disponible immédiatement</div>
+            </div>
+
+            <div class="vopt" onclick="selV(this,'camionnette')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="1" y="7" width="15" height="11" rx="1"/>
+                <path d="M16 10h4l3 3v4h-7V10z"/>
+                <circle cx="5.5" cy="18" r="1.5"/><circle cx="18.5" cy="18" r="1.5"/>
+              </svg>
+              <div class="vn">Camionnette</div>
+              <div class="vd">Bagages volumineux</div>
+              <div class="vbadge vbadge--warn">⚠ 5 jours de préavis</div>
+            </div>
+
+          </div>
+
+          <input type="hidden" name="vehicule" id="veh-input" value="chr">
+
+          <div class="veh-notice" id="veh-notice" style="display:none">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:18px;height:18px;flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r=".5" fill="currentColor"/></svg>
+            La camionnette nécessite une réservation avec un délai minimum de <strong>5 jours</strong>. Assurez-vous que votre date de trajet respecte ce délai.
+          </div>
+
+          <div class="fg" style="margin-top:1.2rem">
+            <label class="fl">Notes spéciales</label>
+            <textarea name="notes" class="fta" placeholder="Siège bébé, accessibilité, bagages importants, consignes particulières…"></textarea>
+          </div>
+
+          <div class="fr2" style="margin-top:.5rem">
+            <button type="button" class="btn2" onclick="nxtStep(1)" style="width:100%;padding:12px;border-radius:4px">← Retour</button>
+            <button type="button" class="sbtn" onclick="nxtStep(3)" style="margin-top:0">Continuer →</button>
+          </div>
+        </div>
+
+        <!-- ═══ ÉTAPE 3 — CONTACT & PAIEMENT ═══════════════════════ -->
+        <div id="st3" style="display:none">
+          <p class="fst">Vos informations</p>
+
+          <div class="fr2">
+            <div class="fg"><label class="fl">Prénom</label><input type="text" name="prenom" class="fi" placeholder="Prénom" required></div>
+            <div class="fg"><label class="fl">Nom</label><input type="text" name="nom" class="fi" placeholder="Nom" required></div>
+          </div>
+          <div class="fg">
+            <label class="fl">Téléphone</label>
+            <input type="tel" name="telephone" class="fi" placeholder="06 00 00 00 00" required>
+          </div>
+          <div class="fg">
+            <label class="fl">Email</label>
+            <input type="email" name="email" class="fi" placeholder="votre@email.com" required>
+          </div>
+
+          <!-- Récap trajet + prix -->
+          <div class="recap-box" id="recap-box" style="display:none">
+            <div class="recap-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--bronze)" stroke-width="1.4" style="width:16px;flex-shrink:0"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+              <span id="recap-route" class="recap-route">— → —</span>
+              <span id="recap-price" class="recap-price">— €</span>
+            </div>
+            <div class="recap-note">2,10 €/km · hors péages · <span id="recap-veh">Toyota C-HR</span></div>
+          </div>
+
+          <div class="fr2" style="margin-top:1.2rem">
+            <button type="button" class="btn2" onclick="nxtStep(2)" style="width:100%;padding:12px;border-radius:4px">← Retour</button>
+            <button type="submit" class="sbtn" style="margin-top:0">Envoyer ma demande →</button>
+          </div>
+
+
+        </div>
+
+      </form>
+
+      <!-- Confirmation -->
+      <div class="conf" id="conf">
+        <div class="conf-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;margin-bottom:.9rem">Réservation envoyée !</h3>
+        <p style="color:var(--muted);line-height:1.8;font-size:.88rem;font-weight:300">
+          Votre demande a bien été reçue. Vous allez recevoir un <strong>WhatsApp de confirmation</strong> dans les prochaines minutes. Nous vous rappellerons au <strong>06 41 35 18 59</strong> pour valider le trajet.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:.6rem;margin-top:1.5rem">
+          <a class="btn1" href="https://wa.me/33641351859?text=Bonjour%2C%20je%20viens%20de%20faire%20une%20r%C3%A9servation%20en%20ligne%20sur%20votre%20site." target="_blank" rel="noopener">
+            Confirmer via WhatsApp
+          </a>
+          <button class="btn2" onclick="resetForm()" style="padding:12px 24px;border-radius:4px">Nouvelle réservation</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin:2rem 0 4rem;color:var(--muted);font-size:.82rem">
+      Besoin d'aide ? Appelez ou WhatsApp :
+      <a href="tel:0641351859" style="color:var(--bronze);margin-left:.3rem;font-weight:500">06 41 35 18 59</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="fg4">
+      <div class="fb"><a class="logo" href="index.html"><svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" stroke="#9e8055" stroke-width="1"/><path d="M6 20L14 8L22 20" stroke="#9e8055" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 20H18.5" stroke="#9e8055" stroke-width="1" stroke-linecap="round"/></svg><div class="logo-wordmark"><span class="logo-main" style="font-size:.65rem">ILS <span>VTC</span></span></div></a>
+        <p>Service VTC — Blois et ses environs.<br><small style="color:var(--muted)">SIRET : 90769233900019</small></p>
+      </div>
+      <div class="fc"><h4>Navigation</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="services.html">Services</a></li><li><a href="reservation.html">Réserver</a></li><li><a href="about.html">À propos</a></li></ul></div>
+      <div class="fc"><h4>Services</h4><ul><li><a href="services.html">Aéroport</a></li><li><a href="services.html">Professionnel</a></li><li><a href="services.html">Événements</a></li><li><a href="services.html">Médical</a></li></ul></div>
+      <div class="fc"><h4>Contact</h4><ul><li><a href="tel:0641351859">06 41 35 18 59</a></li><li><a href="mailto:ilieslassoued@gmail.com">ilieslassoued@gmail.com</a></li><li>Blois et ses environs</li><li>24h/24 — 7j/7</li></ul></div>
+    </div>
+    <div class="fbot"><span>© 2026 ILS VTC · SIRET 90769233900019</span><span>Excellence &amp; Discrétion</span></div>
+  </footer>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="js/main.js"></script>
+<script src="js/reservation.js"></script>
+<script src="js/waves.js"></script>
+</body>
+</html>

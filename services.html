@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services VTC Blois — Aéroport, Médical, Mariage | ILS VTC</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- SEO -->
+  <meta name="description" content="Tous nos services VTC à Blois : transfert aéroport, transport médical, mariage, longue distance, transport scolaire. Devis gratuit en ligne.">
+  <meta name="keywords" content="services VTC Blois, transfert aéroport Blois, transport médical Blois, VTC mariage Blois, taxi longue distance">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="ILS VTC">
+  <link rel="canonical" href="https://ilsvtc.fr/services">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ILS VTC">
+  <meta property="og:url" content="https://ilsvtc.fr/services">
+  <meta property="og:title" content="Services VTC Blois — Aéroport, Médical, Mariage | ILS VTC">
+  <meta property="og:description" content="Tous nos services VTC à Blois : transfert aéroport, transport médical, mariage, longue distance, transport scolaire. Devis gratuit en ligne.">
+  <meta property="og:image" content="https://ilsvtc.fr/og-image.jpg">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Services VTC Blois — Aéroport, Médical, Mariage | ILS VTC">
+  <meta name="twitter:description" content="Tous nos services VTC à Blois : transfert aéroport, transport médical, mariage, longue distance, transport scolaire. Devis gratuit en ligne.">
+  <meta name="twitter:image" content="https://ilsvtc.fr/og-image.jpg">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="FR-41">
+  <meta name="geo.placename" content="Blois">
+  <meta name="geo.position" content="47.5941;1.3330">
+  <meta name="ICBM" content="47.5941, 1.3330">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "ILS VTC",
+    "description": "Service VTC professionnel à Blois et ses environs. Chauffeur privé disponible 24h/24, 7j/7. Toyota C-HR hybride, tarif 2,10€/km.",
+    "url": "https://ilsvtc.fr",
+    "telephone": "+33641351859",
+    "email": "ilieslassoued@gmail.com",
+    "priceRange": "2,10€/km",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, WhatsApp Pay",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 47.5941, "longitude": 1.3330 },
+      "geoRadius": "50000"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Blois",
+      "addressRegion": "Loir-et-Cher",
+      "postalCode": "41000",
+      "addressCountry": "FR"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 47.5941, "longitude": 1.3330 },
+    "identifier": { "@type": "PropertyValue", "name": "SIRET", "value": "90769233900019" },
+    "vehicle": {
+      "@type": "Car",
+      "name": "Toyota C-HR Hybride",
+      "numberOfDoors": 4
+    },
+    "sameAs": ["https://wa.me/33641351859"]
+  }
+  </script>
+</head>
+<body data-page="services">
+<canvas id="bg-canvas"></canvas>
+<div class="bg-vignette"></div>
+<div class="wrap">
+
+  <nav>
+    <a class="logo" href="index.html">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" stroke="#9e8055" stroke-width="1"/><path d="M6 20L14 8L22 20" stroke="#9e8055" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 20H18.5" stroke="#9e8055" stroke-width="1" stroke-linecap="round"/></svg>
+      <div class="logo-wordmark"><span class="logo-main">ILS <span>VTC</span></span><span class="logo-sub">Transport Privé</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-p="home" id="nav-home">Accueil</a></li>
+      <li><a href="services.html" data-p="services" id="nav-services">Services</a></li>
+      <li><a href="reservation.html" data-p="reservation" id="nav-reservation">Réservation</a></li>
+      <li><a href="about.html" data-p="about" id="nav-about">À propos</a></li>
+      <li><a href="contact.html" data-p="contact" id="nav-contact">Contact</a></li>
+    </ul>
+    <div class="nav-r">
+      <div class="lang"><button class="lb active" onclick="setLang('fr')">FR</button><button class="lb" onclick="setLang('en')">EN</button></div>
+      <a class="ncta" href="reservation.html" id="nav-cta">Réserver</a>
+      <div class="burger" onclick="toggleMob()"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <p class="slabel" id="sv-label">Nos Prestations</p>
+    <h1 class="stitle" id="sv-title">Des services <em>sur mesure</em></h1>
+    <p class="ssub" id="sv-sub">Chaque déplacement est unique. Nous adaptons notre service à vos besoins.</p>
+  </div>
+
+  <div style="padding:0 6% 2rem">
+  <div class="srv-grid" style="padding:0;border-radius:8px">
+
+    <div class="sc">
+      <div class="sc-top">
+        <img class="sc-photo" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&h=280&q=75" alt="Transfert aéroport" loading="lazy">
+        <div class="sc-photo-overlay"></div>
+        <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg>
+      </div>
+      <div class="sc-body">
+        <h3 id="s1t">Transfert Aéroport</h3>
+        <p id="s1d">Service de prise en charge depuis ou vers l'aéroport. Suivi de vol en temps réel, attente incluse.</p>
+        <ul class="sfeat"><li id="s1f1">Suivi des vols en direct</li><li id="s1f2">Attente gratuite (30 min)</li><li id="s1f3">Aide aux bagages</li></ul>
+      </div>
+    </div>
+
+    <div class="sc">
+      <div class="sc-top">
+        <img class="sc-photo" src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=600&h=280&q=75" alt="Transport professionnel" loading="lazy">
+        <div class="sc-photo-overlay"></div>
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+      </div>
+      <div class="sc-body">
+        <h3 id="s2t">Transport Professionnel</h3>
+        <p id="s2d">Déplacements d'affaires, réunions, conférences. Image professionnelle garantie.</p>
+        <ul class="sfeat"><li id="s2f1">Discrétion assurée</li><li id="s2f2">WiFi disponible</li><li id="s2f3">Facturation entreprise</li></ul>
+      </div>
+    </div>
+
+    <div class="sc">
+      <div class="sc-top">
+        <img class="sc-photo" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&h=280&q=75" alt="Événements spéciaux" loading="lazy">
+        <div class="sc-photo-overlay"></div>
+        <svg viewBox="0 0 24 24"><path d="M12 2l4 5H8l4-5z"/><path d="M8 7l-5 6h18l-5-6"/><path d="M3 13l9 9 9-9"/></svg>
+      </div>
+      <div class="sc-body">
+        <h3 id="s3t">Événements Spéciaux</h3>
+        <p id="s3d">Mariages, soirées, cérémonies. Un service élégant pour vos moments importants.</p>
+        <ul class="sfeat"><li id="s3f1">Décoration sur demande</li><li id="s3f2">Planification personnalisée</li><li id="s3f3">Disponibilité toute la soirée</li></ul>
+      </div>
+    </div>
+
+    <div class="sc">
+      <div class="sc-top">
+        <img class="sc-photo" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&h=280&q=75" alt="Transport médical" loading="lazy">
+        <div class="sc-photo-overlay"></div>
+        <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/><rect x="7" y="7" width="10" height="10" rx="1"/></svg>
+      </div>
+      <div class="sc-body">
+        <h3 id="s4t">Transport Médical</h3>
+        <p id="s4d">Accompagnement vers les établissements de santé. Discret, patient et fiable.</p>
+        <ul class="sfeat"><li id="s4f1">Assistance montée / descente</li><li id="s4f2">Chauffeur calme et discret</li><li id="s4f3">Horaires flexibles</li></ul>
+      </div>
+    </div>
+
+    <div class="sc">
+      <div class="sc-top">
+        <img class="sc-photo" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&h=280&q=75" alt="Longue distance" loading="lazy">
+        <div class="sc-photo-overlay"></div>
+        <svg viewBox="0 0 24 24"><polyline points="3 6 9 3 15 6 21 3"/><polyline points="3 12 9 9 15 12 21 9"/><line x1="3" y1="6" x2="3" y2="18"/><line x1="9" y1="3" x2="9" y2="15"/><line x1="15" y1="6" x2="15" y2="18"/><line x1="21" y1="3" x2="21" y2="15"/></svg>
+      </div>
+      <div class="sc-body">
+        <h3 id="s5t">Longue Distance</h3>
+        <p id="s5d">Trajets interurbains et régionaux. Confort optimal pour les longs voyages.</p>
+        <ul class="sfeat"><li id="s5f1">Arrêts sur demande</li><li id="s5f2">Climatisation / chauffage</li><li id="s5f3">Tarif kilométrique transparent</li></ul>
+      </div>
+    </div>
+
+    <div class="sc">
+      <div class="sc-top">
+        <img class="sc-photo" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&h=280&q=75" alt="Transport scolaire" loading="lazy">
+        <div class="sc-photo-overlay"></div>
+        <svg viewBox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 2 2.69 4 6 4s6-2 6-4v-5"/><line x1="22" y1="10" x2="22" y2="16"/></svg>
+      </div>
+      <div class="sc-body">
+        <h3 id="s6t">Transport Scolaire</h3>
+        <p id="s6d">Accompagnement régulier et sécurisé des enfants vers l'école ou les activités.</p>
+        <ul class="sfeat"><li id="s6f1">Ponctualité rigoureuse</li><li id="s6f2">Trajet fixe personnalisé</li><li id="s6f3">Communication avec les parents</li></ul>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <div class="cta-band">
+    <p class="slabel">Prêt à voyager ?</p>
+    <h2 class="stitle" style="margin-bottom:1rem">Réservez votre trajet <em>maintenant</em></h2>
+    <p id="sv-sub2">Chaque trajet est préparé avec soin. Contactez-nous ou réservez directement en ligne.</p>
+    <br><a class="btn1" href="reservation.html">Faire une réservation</a>
+  </div>
+
+  <footer>
+    <div class="fg4">
+      <div class="fb">
+        <a class="logo" href="index.html"><svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" stroke="#9e8055" stroke-width="1"/><path d="M6 20L14 8L22 20" stroke="#9e8055" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 20H18.5" stroke="#9e8055" stroke-width="1" stroke-linecap="round"/></svg><div class="logo-wordmark"><span class="logo-main" style="font-size:.65rem">ILS <span>VTC</span></span></div></a>
+        <p id="ft-desc">Service VTC professionnel — Blois et ses environs. Élégance, ponctualité et confiance.</p>
+      </div>
+      <div class="fc"><h4 id="ft-nav">Navigation</h4><ul><li><a href="index.html" id="ft-h">Accueil</a></li><li><a href="services.html" id="ft-s">Services</a></li><li><a href="reservation.html" id="ft-b">Réserver</a></li><li><a href="about.html" id="ft-a">À propos</a></li></ul></div>
+      <div class="fc"><h4 id="ft-st">Services</h4><ul><li><a id="ft-s1">Aéroport</a></li><li><a id="ft-s2">Professionnel</a></li><li><a id="ft-s3">Événements</a></li><li><a id="ft-s4">Médical</a></li></ul></div>
+      <div class="fc"><h4 id="ft-ct">Contact</h4><ul><li><a href="contact.html">06 41 35 18 59</a></li><li><a href="contact.html">ilieslassoued@gmail.com</a></li><li><a id="ft-av">24h/24 — 7j/7</a></li></ul></div>
+    </div>
+    <div class="fbot"><span id="ft-copy">© 2026 ILS VTC. Tous droits réservés.</span><span id="ft-mot">Excellence &amp; Discrétion</span></div>
+  </footer>
+</div>
+<div class="toast" id="toast"></div>
+<script src="js/main.js"></script>
+<script src="js/waves.js"></script>
+</body>
+</html>
