@@ -93,6 +93,9 @@ def about(): return app.send_static_file('about.html')
 @app.route('/contact')
 def contact_page(): return app.send_static_file('contact.html')
 
+@app.route('/googlef270d4e54444a899.html')
+def google_verify(): return app.send_static_file('googlef270d4e54444a899.html')
+
 @app.route('/sitemap.xml')
 def sitemap(): return app.send_static_file('sitemap.xml')
 
